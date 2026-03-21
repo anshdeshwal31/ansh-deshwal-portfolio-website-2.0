@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #d4c0f6;
+  --foreground: #1b1437;
 }
 
 @theme inline {
@@ -12,15 +12,70 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: auto;
+}
+
+/* Hide scrollbar for cleaner look (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #bca5e6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6f559f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5f4a88;
+}
+
+.skills-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.skills-marquee-track {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: skills-scroll 42s linear infinite;
+  will-change: transform;
+}
+
+.skills-marquee-track > * {
+  flex: 0 0 auto;
+}
+
+.skills-marquee::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes skills-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-marquee-track {
+    animation-duration: 85s;
+  }
 }
