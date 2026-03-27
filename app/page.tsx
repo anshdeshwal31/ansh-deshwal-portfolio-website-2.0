@@ -189,7 +189,7 @@ export default function Home() {
         <div className="absolute bottom-20 right-[8%] h-64 w-64 rounded-full bg-pink-600/20 blur-[100px]" />
 
         <div className="relative mx-auto flex min-h-[92vh] max-w-7xl items-center px-6 lg:px-10">
-          <div className="grid w-full gap-12 lg:grid-cols-[1fr_auto]">
+          <div className="grid w-full gap-8 lg:gap-12 lg:grid-cols-[1fr_auto]">
             <div className="flex flex-col justify-center">
               <div className="animate-fade-in-up inline-flex w-fit items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-1.5 text-[15px] font-medium text-purple-300 backdrop-blur-sm">
                 <span className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
@@ -218,12 +218,12 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="animate-fade-in delay-500 hidden lg:flex items-center justify-center relative">
+            <div className="animate-fade-in delay-500 flex items-center justify-center relative order-first lg:order-last">
               <div className="animate-float relative">
                 {/* Outer glow aura */}
                 <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-purple-600/40 via-pink-500/20 to-transparent blur-3xl" />
                 {/* Portrait frame */}
-                <div className="relative w-[360px] h-[440px] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl shadow-purple-900/60">
+                <div className="relative w-[260px] h-[320px] sm:w-[300px] sm:h-[370px] lg:w-[360px] lg:h-[440px] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl shadow-purple-900/60">
                   <Image
                     src="/human/ansh2.png"
                     alt="Ansh Deshwal"
