@@ -458,7 +458,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ ABOUT — illustration as BG ═══ */}
+      {/* ═══ ABOUT — illustration as BG ═══
       <section id="about" className="relative overflow-hidden py-16">
         <div className="absolute inset-0">
           <Image src="/human/About_me.png" alt="" fill className="object-cover opacity-15" />
@@ -491,7 +491,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ═══ CONTACT — illustration as BG ═══ */}
       <section id="contact" className="relative overflow-hidden py-16">
